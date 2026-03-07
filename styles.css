@@ -92,7 +92,8 @@ a.button {
 
 .brand__logo {
   width: auto;
-  height: 50px;
+  height: 40px;
+  padding-left: 10px;
 }
 
 .site-nav {
@@ -217,11 +218,11 @@ a.button {
 }
 
 .scene--desert {
-  --scene-image: url("assets/scene-desert-2.jpg");
+  --scene-image: url("assets/scene-desert-3.jpg");
 }
 
 .scene--desert-remote {
-  --scene-image: url("assets/scene-desert-3.jpg");
+  --scene-image: url("assets/scene-desert-2.jpg");
 }
 
 .scene--mining {
