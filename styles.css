@@ -213,15 +213,15 @@ a.button {
 }
 
 .scene--orbital {
-  --scene-image: url("assets/scene-orbital.png");
+  --scene-image: url("assets/scene-orbital.jpg");
 }
 
 .scene--desert {
-  --scene-image: url("assets/scene-desert-2.png");
+  --scene-image: url("assets/scene-desert-2.jpg");
 }
 
 .scene--desert-remote {
-  --scene-image: url("assets/scene-desert-3.png");
+  --scene-image: url("assets/scene-desert-3.jpg");
 }
 
 .scene--mining {
@@ -229,15 +229,15 @@ a.button {
 }
 
 .scene--woodland {
-  --scene-image: url("assets/scene-woodland-1.png");
+  --scene-image: url("assets/scene-woodland-1.jpg");
 }
 
 .scene--forest {
-  --scene-image: url("assets/scene-forest.png");
+  --scene-image: url("assets/scene-forest.jpg");
 }
 
 .scene--biodiversity-field {
-  --scene-image: url("assets/scene-forest.png");
+  --scene-image: url("assets/scene-forest.jpg");
 }
 
 .scene__content {
