@@ -237,7 +237,7 @@ a.button {
 }
 
 .scene--biodiversity-field {
-  --scene-image: url("assets/scene-biodiversity.jpg");
+  --scene-image: url("assets/scene-forest.png");
 }
 
 .scene__content {
