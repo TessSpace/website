@@ -70,6 +70,12 @@ Prompt:
 
 `Photoreal elevated wide shot of an autonomous unmanned ground vehicle traveling across arid terrain, vehicle relatively small in frame, clear dust trail showing speed and direction, realistic reconnaissance or support mission context, restrained color palette, premium aerospace-defense campaign still, no text, no logos, no watermark, not illustration, not game art, left third kept cleaner for website content, 21:9 composition`
 
+## 11. Small autonomous lunar rover
+
+Prompt:
+
+`Photoreal small autonomous lunar rover operating on the Moon, compact rover with realistic wheels, suspension, mast sensors and navigation cameras, engineering-grade design, subtle tracks in regolith, harsh low-angle sunlight, deep black sky, distant crater rims, realistic lunar dust and metallic surface detail, serious aerospace-defense contractor visual language, not futuristic fantasy, not cartoon, no astronauts, no text, no logos, no watermark, keep the left side darker and more open for website copy, premium cinematic realism, 21:9 composition`
+
 ## Optional reinforcement line
 
 If the model keeps making images too stylized, append this line:
