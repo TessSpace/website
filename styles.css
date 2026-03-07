@@ -528,11 +528,11 @@ body.has-video-modal {
 
 .partner-logo img {
   width: auto;
-  max-width: 100%;
-  max-height: 34px;
+  max-width: calc(100% - 28px);
+  max-height: 40px;
   object-fit: contain;
-  filter: grayscale(1) brightness(1.2) contrast(0.92);
-  opacity: 0.84;
+  filter: none;
+  opacity: 1;
 }
 
 .site-footer {
