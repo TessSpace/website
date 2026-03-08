@@ -165,12 +165,12 @@ a.button {
 /* Scene layout */
 
 .scene {
-  --scene-side-shade-left: rgba(4, 7, 10, 0.62);
-  --scene-side-shade-mid: rgba(4, 7, 10, 0.16);
-  --scene-side-shade-right: rgba(4, 7, 10, 0.56);
-  --scene-top-shade: rgba(6, 9, 12, 0.14);
-  --scene-bottom-shade: rgba(6, 9, 12, 0.42);
-  --scene-vignette-bottom: rgba(0, 0, 0, 0.38);
+  --scene-side-shade-left: rgba(4, 7, 10, 0.74);
+  --scene-side-shade-mid: rgba(4, 7, 10, 0.1);
+  --scene-side-shade-right: rgba(4, 7, 10, 0.18);
+  --scene-top-shade: rgba(6, 9, 12, 0.05);
+  --scene-bottom-shade: rgba(6, 9, 12, 0.22);
+  --scene-vignette-bottom: rgba(0, 0, 0, 0.28);
   position: relative;
   min-height: 100svh;
   display: flex;
