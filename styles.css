@@ -165,6 +165,12 @@ a.button {
 /* Scene layout */
 
 .scene {
+  --scene-side-shade-left: rgba(4, 7, 10, 0.62);
+  --scene-side-shade-mid: rgba(4, 7, 10, 0.16);
+  --scene-side-shade-right: rgba(4, 7, 10, 0.56);
+  --scene-top-shade: rgba(6, 9, 12, 0.14);
+  --scene-bottom-shade: rgba(6, 9, 12, 0.42);
+  --scene-vignette-bottom: rgba(0, 0, 0, 0.38);
   position: relative;
   min-height: 100svh;
   display: flex;
@@ -185,8 +191,8 @@ a.button {
 
 .scene::before {
   background:
-    linear-gradient(90deg, rgba(4, 7, 10, 0.68) 0%, rgba(4, 7, 10, 0.2) 42%, rgba(4, 7, 10, 0.62) 100%),
-    linear-gradient(180deg, rgba(6, 9, 12, 0.18), rgba(6, 9, 12, 0.5)),
+    linear-gradient(90deg, var(--scene-side-shade-left) 0%, var(--scene-side-shade-mid) 42%, var(--scene-side-shade-right) 100%),
+    linear-gradient(180deg, var(--scene-top-shade), var(--scene-bottom-shade)),
     var(--scene-image) center center / cover no-repeat;
 }
 
@@ -194,7 +200,7 @@ a.button {
   z-index: -1;
   background:
     radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.06), transparent 30%),
-    linear-gradient(180deg, transparent 58%, rgba(0, 0, 0, 0.44) 100%);
+    linear-gradient(180deg, transparent 58%, var(--scene-vignette-bottom) 100%);
 }
 
 .scene__video {
@@ -209,8 +215,8 @@ a.button {
 
 .scene--has-video::before {
   background:
-    linear-gradient(90deg, rgba(4, 7, 10, 0.68) 0%, rgba(4, 7, 10, 0.2) 42%, rgba(4, 7, 10, 0.62) 100%),
-    linear-gradient(180deg, rgba(6, 9, 12, 0.18), rgba(6, 9, 12, 0.5));
+    linear-gradient(90deg, var(--scene-side-shade-left) 0%, var(--scene-side-shade-mid) 42%, var(--scene-side-shade-right) 100%),
+    linear-gradient(180deg, var(--scene-top-shade), var(--scene-bottom-shade));
 }
 
 .scene--orbital {
@@ -445,11 +451,11 @@ body.has-video-modal {
   position: relative;
   z-index: 1;
   width: min(960px, calc(100vw - 32px));
-  padding: 18px;
-  background: linear-gradient(180deg, rgba(10, 16, 22, 0.92), rgba(6, 10, 15, 0.96));
-  border: 1px solid rgba(184, 198, 214, 0.16);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--surface-shadow);
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .video-modal__close {
@@ -458,10 +464,11 @@ body.has-video-modal {
   justify-content: center;
   margin-left: auto;
   margin-bottom: 12px;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--muted);
+  padding: 8px 10px;
+  border: 1px solid rgba(184, 198, 214, 0.18);
+  border-radius: 999px;
+  background: rgba(5, 9, 13, 0.78);
+  color: rgba(242, 245, 248, 0.88);
   font: inherit;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -471,7 +478,7 @@ body.has-video-modal {
 
 .video-modal__title {
   margin: 0 0 12px;
-  color: var(--text);
+  color: rgba(242, 245, 248, 0.84);
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.72rem;
@@ -483,6 +490,7 @@ body.has-video-modal {
   max-height: min(74vh, 760px);
   border-radius: var(--radius-lg);
   background: #000;
+  box-shadow: var(--surface-shadow);
 }
 
 .section__heading--compact {
@@ -671,8 +679,8 @@ body.has-video-modal {
 
   .scene--has-video::before {
     background:
-      linear-gradient(90deg, rgba(4, 7, 10, 0.68) 0%, rgba(4, 7, 10, 0.2) 42%, rgba(4, 7, 10, 0.62) 100%),
-      linear-gradient(180deg, rgba(6, 9, 12, 0.18), rgba(6, 9, 12, 0.5)),
+      linear-gradient(90deg, var(--scene-side-shade-left) 0%, var(--scene-side-shade-mid) 42%, var(--scene-side-shade-right) 100%),
+      linear-gradient(180deg, var(--scene-top-shade), var(--scene-bottom-shade)),
       var(--scene-image) center center / cover no-repeat;
   }
 
