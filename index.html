@@ -295,6 +295,134 @@
             </article>
           </div>
 
+          <section class="newsroom-block" aria-labelledby="newsroom-title">
+            <div class="section__heading section__heading--compact">
+              <p class="eyebrow">Newsroom</p>
+              <h3 id="newsroom-title">News from Tess Space</h3>
+              <p class="newsroom-block__intro">Updates, milestones, and announcements from across Tess Space.</p>
+            </div>
+
+            <div class="newsroom-carousel" aria-label="News stories carousel" data-newsroom-carousel tabindex="0">
+              <div class="newsroom-carousel__viewport">
+                <div class="newsroom-carousel__track" data-newsroom-track>
+                  <div class="newsroom-carousel__slide">
+                    <article class="news-card">
+                      <div class="news-card__media">
+                        <img class="news-card__image" src="assets/news/20260309_space_forest.jpg" alt="SPACE FOREST project image" loading="lazy" />
+                      </div>
+
+                      <div class="news-card__body">
+                        <p class="news-card__label">SPACE FOREST</p>
+                        <p class="news-card__date">March 9, 2026</p>
+                        <h4>Tess Space secures contract with the European Space Agency to investigate biodiversity measurement in Scandinavian forests.</h4>
+                        <p>
+                          Under the SPACE FOREST project, Tess Space investigates how autonomous sensing, field robotics,
+                          and repeatable data collection can support biodiversity measurement across dense Scandinavian
+                          forest environments.
+                        </p>
+                      </div>
+                    </article>
+
+                    <article class="news-card">
+                      <div class="news-card__media">
+                        <img class="news-card__image" src="assets/scene-desert-2.jpg" alt="Autonomous UGV field trial placeholder image" loading="lazy" />
+                      </div>
+
+                      <div class="news-card__body">
+                        <p class="news-card__label">TITAN FIELD TRIALS</p>
+                        <p class="news-card__date">February 18, 2026</p>
+                        <h4>Tess Space advances TITAN field testing for GNSS-denied navigation and low-bandwidth teleoperation.</h4>
+                        <p>
+                          Recent TITAN trials validated perception, localization, and navigation workflows across degraded
+                          communications, remote supervision, and route planning for autonomous ground vehicles.
+                        </p>
+                      </div>
+                    </article>
+
+                    <article class="news-card">
+                      <div class="news-card__media">
+                        <img class="news-card__image" src="assets/scene-orbital.jpg" alt="Space mission operations placeholder image" loading="lazy" />
+                      </div>
+
+                      <div class="news-card__body">
+                        <p class="news-card__label">MSC 2026</p>
+                        <p class="news-card__date">February 2026</p>
+                        <h4>Tess Space participates in the Munich Security Conference 2026 to discuss resilient autonomy for dual-use missions.</h4>
+                        <p>
+                          The conference engagement highlighted autonomy, mission systems, and guidance technologies for
+                          contested, remote, and communication-degraded environments.
+                        </p>
+                      </div>
+                    </article>
+
+                    <article class="news-card">
+                      <div class="news-card__media">
+                        <img class="news-card__image" src="assets/scene-lunar-rover-2.jpg" alt="Lunar rover program placeholder image" loading="lazy" />
+                      </div>
+
+                      <div class="news-card__body">
+                        <p class="news-card__label">LUNAR AUTONOMY</p>
+                        <p class="news-card__date">Placeholder</p>
+                        <h4>Tess Space expands lunar rover autonomy concepts for navigation, mobility, and supervision.</h4>
+                        <p>
+                          Placeholder story for future updates on rover system architecture, guidance software, and mission
+                          operations across lunar surface scenarios.
+                        </p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="newsroom-carousel__slide">
+
+                    <article class="news-card">
+                      <div class="news-card__media">
+                        <img class="news-card__image" src="assets/scene-mining-pit.jpg" alt="Mining operations placeholder image" loading="lazy" />
+                      </div>
+
+                      <div class="news-card__body">
+                        <p class="news-card__label">MINING AUTONOMY</p>
+                        <p class="news-card__date">Placeholder</p>
+                        <h4>Tess Space prepares a site-operations update covering routing, oversight, and field data collection.</h4>
+                        <p>
+                          Placeholder story for mining autonomy deployments, fleet supervision, and terrain-aware sensing
+                          across exposed extraction environments.
+                        </p>
+                      </div>
+                    </article>
+
+                    <article class="news-card">
+                      <div class="news-card__media">
+                        <img class="news-card__image" src="assets/scene-biodiversity.jpg" alt="Biodiversity monitoring placeholder image" loading="lazy" />
+                      </div>
+
+                      <div class="news-card__body">
+                        <p class="news-card__label">FIELD ANALYTICS</p>
+                        <p class="news-card__date">Placeholder</p>
+                        <h4>Tess Space will share a future update on under-canopy sensing, wildlife analytics, and environmental insights.</h4>
+                        <p>
+                          Placeholder story for biodiversity monitoring programs, forest operations, and data products built
+                          from repeatable autonomous collection workflows.
+                        </p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <div class="newsroom-carousel__controls" aria-label="News story controls">
+                <p class="newsroom-carousel__status" aria-live="polite" data-newsroom-status>1 / 2</p>
+                <div class="newsroom-carousel__nav">
+                  <button class="button button--secondary newsroom-carousel__button" type="button" data-newsroom-prev>
+                    Previous
+                  </button>
+                  <button class="button button--secondary newsroom-carousel__button" type="button" data-newsroom-next>
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section class="team-block" aria-labelledby="team-title">
             <div class="section__heading section__heading--compact">
               <p class="eyebrow">Team</p>
@@ -458,6 +586,54 @@
             closeModal();
           }
         });
+      })();
+
+      (() => {
+        const carousel = document.querySelector("[data-newsroom-carousel]");
+        const track = carousel?.querySelector("[data-newsroom-track]");
+        const slides = track ? Array.from(track.children) : [];
+        const prevButton = carousel?.querySelector("[data-newsroom-prev]");
+        const nextButton = carousel?.querySelector("[data-newsroom-next]");
+        const status = carousel?.querySelector("[data-newsroom-status]");
+
+        if (!carousel || !track || slides.length < 2 || !prevButton || !nextButton || !status) {
+          return;
+        }
+
+        let index = 0;
+
+        const render = () => {
+          track.style.transform = `translateX(-${index * 100}%)`;
+          status.textContent = `${index + 1} / ${slides.length}`;
+          prevButton.disabled = index === 0;
+          nextButton.disabled = index === slides.length - 1;
+        };
+
+        prevButton.addEventListener("click", () => {
+          index = Math.max(0, index - 1);
+          render();
+        });
+
+        nextButton.addEventListener("click", () => {
+          index = Math.min(slides.length - 1, index + 1);
+          render();
+        });
+
+        carousel.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            index = Math.max(0, index - 1);
+            render();
+          }
+
+          if (event.key === "ArrowRight") {
+            event.preventDefault();
+            index = Math.min(slides.length - 1, index + 1);
+            render();
+          }
+        });
+
+        render();
       })();
     </script>
   </body>
