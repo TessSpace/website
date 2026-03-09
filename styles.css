@@ -307,7 +307,7 @@ h1 {
 
 .section h2 {
   font-size: clamp(2rem, 3.2vw, 3rem);
-  max-width: 12ch;
+  max-width: 40ch;
 }
 
 .scene__summary,
