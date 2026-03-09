@@ -652,6 +652,37 @@ body.has-video-modal {
   max-width: none;
 }
 
+.news-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+  color: rgba(242, 245, 248, 0.86);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.news-card__link:hover {
+  color: var(--text);
+}
+
+.news-card__link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(184, 198, 214, 0.22);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--button-accent-text);
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
 .news-card:hover .news-card__image,
 .news-card:focus-within .news-card__image {
   transform: scale(1.03);
