@@ -114,6 +114,23 @@ a.button {
   color: white;
 }
 
+.site-nav__link--with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-nav__icon {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: 0 0 auto;
+}
+
 /* Buttons */
 
 .button {
