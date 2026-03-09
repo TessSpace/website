@@ -691,7 +691,7 @@ body.has-video-modal {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -900,9 +900,12 @@ body.has-video-modal {
 
   .scene__footer,
   .prompt-grid,
-  .team-grid,
   .partners-grid {
     grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .newsroom-carousel__slide {
@@ -974,6 +977,11 @@ body.has-video-modal {
   .scene__actions .button {
     width: 100%;
   }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
   .video-modal {
     padding: 16px;
   }
