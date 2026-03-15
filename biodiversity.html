@@ -24,10 +24,35 @@
       </a>
 
       <nav class="site-nav" aria-label="Primary">
+        <div class="site-nav__dropdown">
+          <button class="site-nav__dropdown-trigger" type="button" aria-haspopup="true">
+            <span>Products</span>
+            <svg class="site-nav__chevron" viewBox="0 0 12 12" aria-hidden="true">
+              <path d="M2.5 4.5 6 8l3.5-3.5"></path>
+            </svg>
+          </button>
+
+          <div class="site-nav__dropdown-menu" aria-label="Products">
+            <a class="site-nav__dropdown-link" href="titan.html">
+              <span class="site-nav__dropdown-title">TITAN</span>
+              <span class="site-nav__dropdown-copy">Autonomous navigation system with sensor module and AI computer</span>
+            </a>
+            <a class="site-nav__dropdown-link" href="tess-drive.html">
+              <span class="site-nav__dropdown-title">TESS DRIVE</span>
+              <span class="site-nav__dropdown-copy">Mission planner software</span>
+            </a>
+            <a class="site-nav__dropdown-link" href="analytics.html">
+              <span class="site-nav__dropdown-title">ANALYTICS</span>
+              <span class="site-nav__dropdown-copy">Data collection and analytics</span>
+            </a>
+          </div>
+        </div>
+        <span class="site-nav__separator" aria-hidden="true">|</span>
         <a href="index.html#defence">Defence</a>
-        <a href="index.html#space">Space</a>
-        <a href="index.html#mining">Mining</a>
+        <a href="space.html">Space</a>
+        <a href="mining.html">Mining</a>
         <a href="#biodiversity">Biodiversity</a>
+        <span class="site-nav__separator" aria-hidden="true">|</span>
         <a class="site-nav__link--with-icon" href="team.html">
           <svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
             <rect x="7" y="7" width="10" height="10" rx="2"></rect>

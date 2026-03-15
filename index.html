@@ -27,10 +27,35 @@
       </a>
 
       <nav class="site-nav" aria-label="Primary">
-        <a href="#defence">Defence</a>
-        <a href="#space">Space</a>
-        <a href="#mining">Mining</a>
+        <div class="site-nav__dropdown">
+          <button class="site-nav__dropdown-trigger" type="button" aria-haspopup="true">
+            <span>Products</span>
+            <svg class="site-nav__chevron" viewBox="0 0 12 12" aria-hidden="true">
+              <path d="M2.5 4.5 6 8l3.5-3.5"></path>
+            </svg>
+          </button>
+
+          <div class="site-nav__dropdown-menu" aria-label="Products">
+            <a class="site-nav__dropdown-link" href="titan.html">
+              <span class="site-nav__dropdown-title">TITAN</span>
+              <span class="site-nav__dropdown-copy">Autonomous navigation system with sensor module and AI computer</span>
+            </a>
+            <a class="site-nav__dropdown-link" href="tess-drive.html">
+              <span class="site-nav__dropdown-title">TESS DRIVE</span>
+              <span class="site-nav__dropdown-copy">Mission planner software</span>
+            </a>
+            <a class="site-nav__dropdown-link" href="analytics.html">
+              <span class="site-nav__dropdown-title">ANALYTICS</span>
+              <span class="site-nav__dropdown-copy">Data collection and analytics</span>
+            </a>
+          </div>
+        </div>
+        <span class="site-nav__separator" aria-hidden="true">|</span>
+        <a href="index.html#defence">Defence</a>
+        <a href="space.html">Space</a>
+        <a href="mining.html">Mining</a>
         <a href="biodiversity.html">Biodiversity</a>
+        <span class="site-nav__separator" aria-hidden="true">|</span>
         <a class="site-nav__link--with-icon" href="team.html">
           <svg class="site-nav__icon" viewBox="0 0 24 24" aria-hidden="true">
             <rect x="7" y="7" width="10" height="10" rx="2"></rect>
@@ -108,45 +133,6 @@
           <span>Under-canopy autonomy</span>
           <span>Sensor fusion</span>
           <span>Remote supervision</span>
-        </div>
-      </section>
-
-      <section class="scene scene--orbital" id="space">
-        <div class="scene__content">
-          <div class="scene__panel">
-            <p class="eyebrow">Space</p>
-            <h2>Mission autonomy for earth and space</h2>
-            <p class="scene__summary">
-              Lunar Rover system for space rover operations and GNC software under degraded comms. Human-on-the-loop (HOTL) lets AI operate autonomously, with operators monitoring and intervening only when necessary for autopilot-like efficiency and speed.
-            </p>
-            <div class="scene__actions">
-              <a class="button button--primary" href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="scene__footer" aria-label="Capabilities">
-          <span>Lunar rover systems</span>
-          <span>Human-on-the-loop</span>
-          <span>Secure uplink</span>
-        </div>
-      </section>
-
-      <section class="scene scene--mining" id="mining">
-        <div class="scene__content">
-          <div class="scene__panel">
-            <p class="eyebrow">Mining</p>
-            <h2>Autonomous operations, environmental monitoring, and site data collection for mineral collection.</h2>
-            <p class="scene__summary">
-              Remote oversight, fleet movement, and operational visibility for excavation and raw material sites.
-            </p>
-          </div>
-        </div>
-
-        <div class="scene__footer">
-          <span>Stand-off operation</span>
-          <span>Dust-tolerant sensing</span>
-          <span>Wide-area routing</span>
         </div>
       </section>
 
