@@ -267,10 +267,10 @@ a.button {
 }
 
 .site-header__cta {
-  min-height: 30px;
-  padding: 0 10px;
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
+  min-height: 28px;
+  padding: 0 8px;
+  font-size: 0.6rem;
+  letter-spacing: 0.09em;
 }
 
 .button--primary {
@@ -522,6 +522,17 @@ h1 {
   margin-bottom: 16px;
 }
 
+.prompt-card__media-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.prompt-card__media-gallery--trio {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .prompt-card__media {
   overflow: hidden;
   border: 1px solid rgba(184, 198, 214, 0.14);
@@ -554,6 +565,16 @@ h1 {
   aspect-ratio: auto;
   object-fit: contain;
   margin: 0 auto;
+}
+
+.prompt-card__image--gallery {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border: 1px solid rgba(184, 198, 214, 0.14);
+  border-radius: var(--radius-lg);
+  background: rgba(7, 11, 15, 0.72);
 }
 
 .prompt-card__video {
@@ -1072,6 +1093,10 @@ body.has-video-modal {
 
   .newsroom-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .prompt-card__media-gallery {
+    grid-template-columns: 1fr;
   }
 }
 

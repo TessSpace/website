@@ -72,11 +72,24 @@
     </header>
 
     <main>
-      <section class="scene scene--orbital" id="tess-drive">
+      <section class="scene scene--orbital scene--has-video" id="tess-drive">
+        <video
+          class="scene__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/scene-desert-2.jpg"
+          aria-hidden="true"
+        >
+          <source src="assets/march_2026_field_test.mp4" type="video/mp4" />
+        </video>
+
         <div class="scene__content">
           <div class="scene__panel">
             <p class="eyebrow">Product</p>
-            <h1>TESS DRIVE mission planner software for operator-led autonomy.</h1>
+            <h1>TESS DRIVE mission planner for full control.</h1>
             <p class="scene__summary">
               TESS DRIVE is the operator software layer for mission planning, route approval, supervisory control, and
               human-on-the-loop workflows across defence, space, mining, and remote field operations.
@@ -107,10 +120,11 @@
 
           <article class="prompt-card prompt-card--with-media product-placeholder-card">
             <p class="prompt-card__label">Placeholder Visual</p>
-            <h3>Current TESS DRIVE product image</h3>
-            <p>Temporary placeholder image for TESS DRIVE showing the mission planner interface and map-based workflow.</p>
-            <div class="prompt-card__media prompt-card__media--product">
-              <img class="prompt-card__image prompt-card__image--contain" src="assets/products/tess_mission_planner.png" alt="TESS DRIVE mission planner placeholder interface" loading="lazy" />
+            <h3>Current TESS DRIVE interface screens</h3>
+            <p>Current TESS DRIVE placeholder screens showing the mission planner, zoning, and waypoint workflow.</p>
+            <div class="prompt-card__media-gallery">
+              <img class="prompt-card__image prompt-card__image--gallery" src="assets/products/tess_drive_01.jpg" alt="TESS DRIVE interface showing mission planning and zone setup" loading="lazy" />
+              <img class="prompt-card__image prompt-card__image--gallery" src="assets/products/tess_drive_02.jpg" alt="TESS DRIVE interface showing waypoint planning and mission execution setup" loading="lazy" />
             </div>
           </article>
 
