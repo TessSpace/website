@@ -589,6 +589,16 @@ h1 {
   outline: none;
 }
 
+.prompt-card__video--inline {
+  cursor: default;
+}
+
+.prompt-card__video--inline:hover,
+.prompt-card__video--inline:focus-visible {
+  transform: none;
+  filter: none;
+}
+
 body.has-video-modal {
   overflow: hidden;
 }
