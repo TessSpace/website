@@ -72,7 +72,20 @@
     </header>
 
     <main>
-      <section class="scene scene--orbital" id="space">
+      <section class="scene scene--orbital scene--has-video" id="space">
+        <video
+          class="scene__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/scene-orbital.jpg"
+          aria-hidden="true"
+        >
+          <source src="assets/tess_space_lunar_rover.mp4" type="video/mp4" />
+        </video>
+
         <div class="scene__content">
           <div class="scene__panel">
             <p class="eyebrow">Space</p>
