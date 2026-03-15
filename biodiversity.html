@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://tess-space.com/biodiversity.html" />
     <meta
       name="description"
-      content="Autonomous biodiversity monitoring, under-canopy field analytics, and repeatable environmental data collection across dense forest terrain."
+      content="Autonomous biodiversity monitoring, Arctic fox analysis in Greenland, and repeatable environmental data collection across complex terrain."
     />
     <meta property="og:url" content="https://tess-space.com/biodiversity.html" />
     <link rel="icon" href="assets/favicon-2.png?v=4" type="image/png" />
@@ -47,7 +47,7 @@
     </header>
 
     <main>
-      <section class="scene scene--forest scene--has-video" id="biodiversity">
+      <section class="scene scene--arctic scene--has-video" id="biodiversity">
         <video
           class="scene__video"
           autoplay
@@ -55,31 +55,45 @@
           loop
           playsinline
           preload="metadata"
-          poster="assets/scene-forest.jpg"
+          poster="assets/fox-detection-check.png"
           aria-hidden="true"
         >
-          <source src="assets/forest-biodiversity-deer-detection.mp4" type="video/mp4" />
+          <source src="assets/snow-polar-fox-detection.mp4" type="video/mp4" />
         </video>
 
         <div class="scene__content">
           <div class="scene__panel">
-            <p class="eyebrow">Biodiversity</p>
-            <h1>Forest sensing, route coverage, and measurement of flora and fauna.</h1>
+            <p class="eyebrow">Arctic fox, Vulpes lagopus</p>
+            <h1>Arctic fox monitoring across Greenland's tundra, rocky coasts, and inland mountains.</h1>
             <p class="scene__summary">
-              Autonomous survey and repeatable data collection through dense mixed terrain, supporting under-canopy
-              operations, wildlife monitoring, and environmental intelligence.
+              Widespread throughout Greenland, the Arctic fox thrives across frozen tundra, rocky coasts, and inland
+              mountain environments. Tess Space supports detection, segmentation, and repeatable wildlife analytics for
+              biodiversity monitoring in harsh polar terrain.
             </p>
           </div>
         </div>
 
         <div class="scene__footer">
-          <span>Mixed terrain</span>
-          <span>Concealed movement</span>
-          <span>Route confidence</span>
+          <span>Greenland coverage</span>
+          <span>Polar habitats</span>
+          <span>Wildlife analytics</span>
         </div>
       </section>
 
-      <section class="scene scene--biodiversity-field">
+      <section class="scene scene--biodiversity-field scene--has-video">
+        <video
+          class="scene__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/scene-biodiversity.jpg"
+          aria-hidden="true"
+        >
+          <source src="assets/forest-biodiversity-deer-segmentation.mp4" type="video/mp4" />
+        </video>
+
         <div class="scene__content">
           <div class="scene__panel">
             <p class="eyebrow">Biodiversity</p>
@@ -98,11 +112,36 @@
         </div>
       </section>
 
+      <section class="scene scene--arctic">
+        <div class="scene__content">
+          <div class="scene__panel">
+            <p class="eyebrow">Arctic fox facts</p>
+            <h2>Size, habitat, mobility, and color morphs across Greenland.</h2>
+            <p class="scene__summary">
+              Arctic foxes are typically 75 to 100 cm long including the tail, weigh 3 to 8 kilos, and carry thick,
+              insulating fur suited to polar conditions. They inhabit rocky coastal areas, tundra, and even sea ice,
+              and are known for long-distance movement, including one tracked journey from Svalbard to Greenland in
+              just 21 days. The white fox lives in the tundra and turns white in winter for camouflage, while the blue
+              fox keeps a dark bluish-grey coat year-round and is more often associated with the coast.
+            </p>
+          </div>
+        </div>
+
+        <div class="scene__footer">
+          <span>75-100 cm incl. tail</span>
+          <span>3-8 kg body mass</span>
+          <span>Sea ice habitat</span>
+          <span>21-day Greenland crossing</span>
+          <span>White tundra morph</span>
+          <span>Blue coastal morph</span>
+        </div>
+      </section>
+
       <section class="section" id="programs">
         <div class="section__content">
           <div class="section__heading">
             <p class="eyebrow">Programs</p>
-            <h2>Biodiversity monitoring and field analytics under dense canopy.</h2>
+            <h2>Biodiversity monitoring, Arctic fox detection, and field analytics across remote terrain.</h2>
           </div>
 
           <div class="prompt-grid">
@@ -125,6 +164,50 @@
                   data-video-title="Biodiversity monitoring"
                 >
                   <source src="assets/forest-biodiversity-deer-segmentation.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </article>
+            <article class="prompt-card prompt-card--with-media">
+              <p class="prompt-card__label">02</p>
+              <h3>Arctic fox detection</h3>
+              <p>Detection workflows isolate Arctic fox activity across snow-covered terrain for wildlife monitoring and habitat analysis.</p>
+              <div class="prompt-card__media">
+                <video
+                  class="prompt-card__video"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="assets/fox-detection-check.png"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Open Arctic fox detection video"
+                  data-video-title="Arctic fox detection"
+                >
+                  <source src="assets/snow-polar-fox-detection.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </article>
+            <article class="prompt-card prompt-card--with-media">
+              <p class="prompt-card__label">03</p>
+              <h3>Arctic fox segmentation</h3>
+              <p>Segmentation outputs track Arctic fox contours in snow and rock environments for higher-confidence ecological review.</p>
+              <div class="prompt-card__media">
+                <video
+                  class="prompt-card__video"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="assets/fox-segmentation-check.png"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Open Arctic fox segmentation video"
+                  data-video-title="Arctic fox segmentation"
+                >
+                  <source src="assets/snow-polar-fox-segmentation.mp4" type="video/mp4" />
                 </video>
               </div>
             </article>
@@ -151,6 +234,27 @@
                     Under the SPACE FOREST project, Tess Space investigates how autonomous sensing, field robotics, and
                     repeatable data collection can support biodiversity measurement across dense Scandinavian forest
                     environments.
+                  </p>
+                  <a class="news-card__link" href="https://www.linkedin.com/company/tess-space/" target="_blank" rel="noopener noreferrer">
+                    <span class="news-card__link-icon" aria-hidden="true">in</span>
+                    <span>View on LinkedIn</span>
+                  </a>
+                </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-card__media">
+                  <img class="news-card__image" src="assets/fox-segmentation-check.png" alt="Arctic fox monitoring image" loading="lazy" />
+                </div>
+
+                <div class="news-card__body">
+                  <p class="news-card__label">ARCTIC FOX</p>
+                  <p class="news-card__date">March 15, 2026</p>
+                  <h4>Tess Space expands biodiversity monitoring workflows for the Arctic fox across Greenland.</h4>
+                  <p>
+                    Arctic fox, <em>Vulpes lagopus</em>, is widespread throughout Greenland and thrives in tundra, rocky
+                    coasts, and inland mountains. Current workflows focus on detection, segmentation, and repeatable
+                    species analytics across polar terrain.
                   </p>
                   <a class="news-card__link" href="https://www.linkedin.com/company/tess-space/" target="_blank" rel="noopener noreferrer">
                     <span class="news-card__link-icon" aria-hidden="true">in</span>

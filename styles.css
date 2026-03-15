@@ -260,6 +260,10 @@ a.button {
   --scene-image: url("assets/scene-forest.jpg");
 }
 
+.scene--arctic {
+  --scene-image: url("assets/fox-detection-check.png");
+}
+
 .scene--biodiversity-field {
   --scene-image: url("assets/scene-forest.jpg");
 }
@@ -538,6 +542,7 @@ body.has-video-modal {
 
 .newsroom-grid {
   display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -921,6 +926,7 @@ body.has-video-modal {
   }
 
   .scene__footer,
+  .newsroom-grid,
   .prompt-grid,
   .partners-grid {
     grid-template-columns: 1fr;
@@ -937,6 +943,10 @@ body.has-video-modal {
   .newsroom-carousel__controls {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .newsroom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -998,6 +1008,10 @@ body.has-video-modal {
 
   .scene__actions .button {
     width: 100%;
+  }
+
+  .newsroom-grid {
+    grid-template-columns: 1fr;
   }
 
   .team-grid {
