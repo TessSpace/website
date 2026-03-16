@@ -1,3 +1,7 @@
+Tess Space provides autonomous AI guidance and navigation system for unmanned ground vehicles (UGV), mission planning software, and sensor integration for defence, mineral exploration and remote site operations in harsh terrain. 
+Our technology supports field operations such as terrain mapping, exploration sensing, geotagged mission workflows, pit and stockpile analytics, and robotic resupply across remote and difficult-to-access sites. 
+By combining TITAN onboard AI autonomy, TESS DRIVE mission planning, and ANALYTICS for site intelligence and situational awareness, Tess Space turns fragmented field work into repeatable autonomous missions.
+
 # Tess Space Website Instructions
 
 - Keep the top navigation consistent across all public HTML pages.
