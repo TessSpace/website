@@ -5,6 +5,7 @@ By combining TITAN onboard AI autonomy, TESS DRIVE mission planning, and ANALYTI
 # Tess Space Website Instructions
 
 - Keep the top navigation consistent across all public HTML pages.
+- Do not include `SPACE` in the top navigation, but keep `space.html` and related files in the repo unless explicitly asked to remove them.
 - Keep the `PARTNERS` section with the heading `Trusted ecosystem collaborators.` on every public HTML page.
 - When adding a new page, include the shared partners block before the footer.
 - Reuse the existing partner logos and shared styles unless explicitly asked to change them.
