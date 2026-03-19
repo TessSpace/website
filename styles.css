@@ -573,6 +573,15 @@ h1 {
   max-width: none;
 }
 
+.section__heading--wide .section__copy {
+  max-width: 760px;
+}
+
+.section__heading--wide > .newsroom-block__intro,
+.section__heading--wide > .team-block__intro {
+  max-width: 760px;
+}
+
 .section__title--nowrap {
   max-width: none;
   white-space: nowrap;
