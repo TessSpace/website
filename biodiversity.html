@@ -72,40 +72,7 @@
     </header>
 
     <main>
-      <section class="scene scene--arctic scene--has-video" id="biodiversity">
-        <video
-          class="scene__video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          poster="assets/fox-detection-check.png"
-          aria-hidden="true"
-        >
-          <source src="assets/snow-polar-fox-detection.mp4" type="video/mp4" />
-        </video>
-
-        <div class="scene__content">
-          <div class="scene__panel">
-            <p class="eyebrow">Arctic fox, Vulpes lagopus</p>
-            <h1>Arctic fox monitoring across Greenland's tundra, rocky coasts, and inland mountains.</h1>
-            <p class="scene__summary">
-              Widespread throughout Greenland, the Arctic fox thrives across frozen tundra, rocky coasts, and inland
-              mountain environments. Tess Space supports detection, segmentation, and repeatable wildlife analytics for
-              biodiversity monitoring in harsh polar terrain.
-            </p>
-          </div>
-        </div>
-
-        <div class="scene__footer">
-          <span>Greenland coverage</span>
-          <span>Polar habitats</span>
-          <span>Wildlife analytics</span>
-        </div>
-      </section>
-
-      <section class="scene scene--biodiversity-field scene--has-video">
+      <section class="scene scene--biodiversity-field scene--has-video" id="biodiversity">
         <video
           class="scene__video"
           autoplay
@@ -137,7 +104,40 @@
         </div>
       </section>
 
-      <section class="scene scene--arctic">
+      <section class="scene scene--arctic scene--has-video">
+        <video
+          class="scene__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/fox-detection-check.png"
+          aria-hidden="true"
+        >
+          <source src="assets/snow-polar-fox-detection.mp4" type="video/mp4" />
+        </video>
+
+        <div class="scene__content">
+          <div class="scene__panel">
+            <p class="eyebrow">Arctic fox, Vulpes lagopus</p>
+            <h1>Arctic fox monitoring across Greenland's tundra, rocky coasts, and inland mountains.</h1>
+            <p class="scene__summary">
+              Widespread throughout Greenland, the Arctic fox thrives across frozen tundra, rocky coasts, and inland
+              mountain environments. Tess Space supports detection, segmentation, and repeatable wildlife analytics for
+              biodiversity monitoring in harsh terrain.
+            </p>
+          </div>
+        </div>
+
+        <!-- <div class="scene__footer">
+          <span>Greenland coverage</span>
+          <span>Polar habitats</span>
+          <span>Wildlife analytics</span>
+        </div> -->
+      </section>
+
+      <!-- <section class="scene scene--arctic">
         <div class="scene__content">
           <div class="scene__panel">
             <p class="eyebrow">Arctic fox facts</p>
@@ -160,20 +160,20 @@
           <span>White tundra morph</span>
           <span>Blue coastal morph</span>
         </div>
-      </section>
+      </section> -->
 
       <section class="section" id="programs">
         <div class="section__content">
-          <div class="section__heading">
-            <p class="eyebrow">Programs</p>
-            <h2>Biodiversity monitoring, Arctic fox detection, and field analytics across remote terrain.</h2>
+          <div class="section__heading section__heading--wide">
+            <p class="eyebrow">Example Use Cases</p>
+            <h2 class="section__title--nowrap">Biodiversity monitoring and field analytics across remote terrain.</h2>
           </div>
 
           <div class="prompt-grid">
             <article class="prompt-card prompt-card--with-media">
               <p class="prompt-card__label">01</p>
               <h3>Biodiversity monitoring</h3>
-              <p>Under-canopy silent operations for biodiversity monitoring, situational awareness, and data analytics.</p>
+              <p>Under-canopy silent operations for biodiversity monitoring, situational awareness, and data analytics in environments where satellite data and aerial drones are too noisy and limited by dense canopy.</p>
               <div class="prompt-card__media">
                 <video
                   class="prompt-card__video"
@@ -194,8 +194,8 @@
             </article>
             <article class="prompt-card prompt-card--with-media">
               <p class="prompt-card__label">02</p>
-              <h3>Arctic fox detection</h3>
-              <p>Detection workflows isolate Arctic fox activity across snow-covered terrain for wildlife monitoring and habitat analysis.</p>
+              <h3>Animal detection and classification</h3>
+              <p>AI-driven detection workflows identify animals, species-specific features, and other biologically relevant observations across complex terrain, supporting classification, confidence scoring, and review-ready outputs for efficient field analysis.</p>
               <div class="prompt-card__media">
                 <video
                   class="prompt-card__video"
@@ -216,8 +216,8 @@
             </article>
             <article class="prompt-card prompt-card--with-media">
               <p class="prompt-card__label">03</p>
-              <h3>Arctic fox segmentation</h3>
-              <p>Segmentation outputs track Arctic fox contours in snow and rock environments for higher-confidence ecological review.</p>
+              <h3>Accurate instance segmentation</h3>
+              <p>Instance segmentation and tracking workflows isolate object boundaries frame by frame, enabling precise masking, stronger contour definition, and higher-quality visual analytics for monitoring and reporting.</p>
               <div class="prompt-card__media">
                 <video
                   class="prompt-card__video"
