@@ -170,12 +170,22 @@
                 models for planning, categorization, and exploration support.
               </p>
               <div class="prompt-card__media">
-                <img
-                  class="prompt-card__image"
-                  src="assets/products/tess_ugv_mining_1.jpg"
-                  alt="Autonomous UGV operating across remote rocky terrain"
-                  loading="lazy"
-                />
+                <video
+                  class="prompt-card__video"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="assets/products/tess_ugv_mining_1.jpg"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Open orbit scan video"
+                  data-video-title="Surface mapping and terrain intelligence"
+                  data-video-modal-trigger
+                >
+                  <source src="assets/360_orbit_scan.mp4" type="video/mp4" />
+                </video>
               </div>
             </article>
             <article class="prompt-card prompt-card--with-media">
@@ -413,5 +423,92 @@
         </div>
       </section>
     </main>
+
+    <div class="video-modal" hidden data-video-modal>
+      <button class="video-modal__backdrop" type="button" aria-label="Close video" data-video-modal-close></button>
+      <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+        <button class="video-modal__close" type="button" aria-label="Close video" data-video-modal-close>
+          Close
+        </button>
+        <p class="video-modal__title" id="video-modal-title">Video preview</p>
+        <video class="video-modal__video" controls playsinline loop preload="metadata"></video>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const modal = document.querySelector("[data-video-modal]");
+        const modalVideo = modal?.querySelector(".video-modal__video");
+        const modalTitle = modal?.querySelector(".video-modal__title");
+        const closeButtons = modal?.querySelectorAll("[data-video-modal-close]");
+        const triggers = document.querySelectorAll("[data-video-modal-trigger]");
+
+        if (!modal || !modalVideo || !modalTitle || !closeButtons?.length || !triggers.length) {
+          return;
+        }
+
+        let activeTrigger = null;
+
+        const openModal = (trigger) => {
+          const source = trigger.querySelector("source");
+          if (!source?.src) {
+            return;
+          }
+
+          activeTrigger = trigger;
+          modalTitle.textContent = trigger.dataset.videoTitle || "Video preview";
+          modalVideo.poster = trigger.getAttribute("poster") || "";
+          modalVideo.innerHTML = "";
+
+          const modalSource = document.createElement("source");
+          modalSource.src = source.src;
+          modalSource.type = source.type || "video/mp4";
+          modalVideo.appendChild(modalSource);
+
+          modal.hidden = false;
+          document.body.classList.add("has-video-modal");
+          modalVideo.currentTime = trigger.currentTime || 0;
+          modalVideo.muted = true;
+          modalVideo.load();
+
+          const playAttempt = modalVideo.play();
+          if (playAttempt && typeof playAttempt.catch === "function") {
+            playAttempt.catch(() => {});
+          }
+
+          modal.querySelector(".video-modal__close")?.focus();
+        };
+
+        const closeModal = () => {
+          modalVideo.pause();
+          modalVideo.removeAttribute("poster");
+          modalVideo.innerHTML = "";
+          modal.hidden = true;
+          document.body.classList.remove("has-video-modal");
+          activeTrigger?.focus();
+          activeTrigger = null;
+        };
+
+        triggers.forEach((video) => {
+          video.addEventListener("click", () => openModal(video));
+          video.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              openModal(video);
+            }
+          });
+        });
+
+        closeButtons.forEach((button) => {
+          button.addEventListener("click", closeModal);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !modal.hidden) {
+            closeModal();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
