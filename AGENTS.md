@@ -5,6 +5,7 @@ By combining TITAN onboard AI autonomy, TESS DRIVE mission planning, and ANALYTI
 # Tess Space Website Instructions
 
 - Keep the top navigation consistent across all public HTML pages.
+- Use `defence.html` as the dedicated Defence domain page in the top navigation instead of anchoring Defence from the homepage.
 - Do not include `SPACE` in the top navigation, but keep `space.html` and related files in the repo unless explicitly asked to remove them.
 - Keep the `PARTNERS` section with the heading `Trusted ecosystem collaborators.` on every public HTML page.
 - When adding a new page, include the shared partners block before the footer.
