@@ -514,8 +514,13 @@ h1 {
 
 .section {
   position: relative;
-  padding: 136px 0 88px;
+  margin: 0;
+  padding: 88px 0 88px;
   background: var(--section-surface);
+}
+
+.section.section--partners .partners-block {
+  margin-top: 0;
 }
 
 .section--has-video {
@@ -549,10 +554,6 @@ h1 {
 .section--has-video .section__content {
   position: relative;
   z-index: 1;
-}
-
-.section--tight-top {
-  padding-top: 112px;
 }
 
 .section__content {
@@ -617,6 +618,34 @@ h1 {
 
 .prompt-card h3 {
   font-size: 1.5rem;
+}
+
+.prompt-card__sensor-list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.prompt-card__sensor-list li {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid rgba(184, 198, 214, 0.12);
+  border-radius: var(--radius-lg);
+  background: rgba(10, 16, 22, 0.5);
+}
+
+.prompt-card__sensor-list strong {
+  color: rgba(238, 245, 251, 0.96);
+  font-size: 0.98rem;
+}
+
+.prompt-card__sensor-list span {
+  color: rgba(231, 237, 243, 0.72);
+  line-height: 1.45;
+  font-size: 0.92rem;
 }
 
 .prompt-card__actions {
@@ -1581,12 +1610,9 @@ body.has-image-modal {
   }
 
   .section {
-    padding-top: 92px;
+    padding-top: 76px;
   }
 
-  .section--tight-top {
-    padding-top: 80px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
