@@ -1,0 +1,18 @@
+# Tess Space
+
+> Tess Space builds autonomous UGV software for defence, mineral exploration, biodiversity monitoring, and remote field operations.
+
+This file describes the current public website at https://tess-space.com/. Use the pages below as the primary source for the public site. Pages that are not linked from the public top navigation are intentionally excluded.
+
+## Public Pages
+
+- [Homepage](https://tess-space.com/): Company overview, operational domains, product stack, partners, and contact.
+- [Defence](https://tess-space.com/defence.html): Autonomy for unmanned ground vehicles in contested and degraded environments.
+- [Mineral Exploration](https://tess-space.com/mineral-exploration.html): Terrain mapping, sensing, site analytics, and remote field operations for mineral exploration.
+- [Biodiversity](https://tess-space.com/biodiversity.html): Pollinator, wildlife, and vegetation monitoring with repeatable field data collection and analytics.
+- [Team](https://tess-space.com/team.html): Team overview and company contact point.
+
+## Site Metadata
+
+- [Sitemap](https://tess-space.com/sitemap.xml): Canonical indexable pages.
+- [Robots](https://tess-space.com/robots.txt): Crawl guidance.
