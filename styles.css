@@ -327,7 +327,8 @@ a.button {
     linear-gradient(180deg, transparent 58%, var(--scene-vignette-bottom) 100%);
 }
 
-.scene__video {
+.scene__video,
+.scene__image {
   position: absolute;
   inset: 0;
   z-index: -3;
