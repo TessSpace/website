@@ -26,8 +26,9 @@ jobs:
           server: linux380.unoeuro.com
           username: tess-space.com
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           port: 21
+          timeout: 120000
           local-dir: ./
           server-dir: /public_html/
           state-name: .tess-ftp-deploy-sync-state.json
