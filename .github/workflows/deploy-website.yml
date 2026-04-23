@@ -1,0 +1,41 @@
+name: Deploy website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: website-ftp-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Publish to FTP
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Upload site to UnoEuro
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: linux380.unoeuro.com
+          username: tess-space.com
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./
+          server-dir: /public_html/
+          state-name: .tess-ftp-deploy-sync-state.json
+          log-level: minimal
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.codex/**
+            **/AGENTS.md
+            **/image-prompts.md
