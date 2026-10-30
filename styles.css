@@ -903,12 +903,15 @@ nav.links a:hover .nav-idx, nav.links a.active .nav-idx { width: 17px; margin-ri
 @media (max-width: 980px) { .sv-grid { grid-template-columns: 1fr; } }
  
 /* ---- Investor (lys) ---- */
-.investor { position: relative; overflow: hidden; isolation: isolate; background: #f4f4f2; padding: clamp(60px, 9vw, 110px) 0; }
-.investor h2 { font-size: clamp(2.25rem, 7vw, 4.6875rem); font-weight: 800; line-height: 1.05; margin-bottom: clamp(28px, 4vw, 50px); color: #000; }
+.investor { --investor-h2: clamp(2.25rem, 7vw, 4.6875rem); position: relative; overflow: hidden; isolation: isolate; background: #f4f4f2; padding: clamp(60px, 9vw, 110px) 0; }
+.investor h2 { font-size: var(--investor-h2); font-weight: 800; line-height: 1.05; margin-bottom: clamp(28px, 4vw, 50px); color: #000; }
 .investor p { color: var(--paper-dim); max-width: 440px; margin-bottom: clamp(28px, 4vw, 50px); font-size: 0.96875rem; }
 .investor .wrap { position: relative; z-index: 1; }
-.investor-book { position: absolute; z-index: -1; right: -20%; bottom: -1%; width: 100%; height: 720px; pointer-events: none; background: url("assets/investorbook.png") center / contain no-repeat; }
-@media (max-width: 1520px) { .investor-book { display: none; } }
+/* Bogen fylder pladsen mellem teksten og wrap'ens højre kant og skaleres ned (contain), når pladsen bliver smal.
+   Den skjules, når pladsen er under 240px. --book-text = overskriftens bredde i em; sæt den inline, hvis en side har en længere overskrift. */
+.investor-book { --edge: calc(max(0px, (100% - var(--wrap-max)) / 2) + var(--gutter)); position: absolute; z-index: -1; top: 5%; bottom: 5%; right: var(--edge); left: calc(var(--edge) + max(var(--investor-h2) * var(--book-text, 7.8), 450px) + 48px); pointer-events: none; container-type: inline-size; }
+.investor-book::before { content: ""; position: absolute; inset: 0; background: url("assets/investorbook.webp") right center / contain no-repeat; }
+@container (max-width: 240px) { .investor-book::before { display: none; } }
 
  
 /* ---- DK/UK ---- */
